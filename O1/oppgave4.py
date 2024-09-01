@@ -11,6 +11,7 @@ result_b = (a + b) * c      #(a + b) * c
 result_c = a / b / c        #a / b / c
 result_d = a / (b / c)      #a / (b / c)
 
+#Her 
 print(f"{a} + {b} * {c} = " + str(result_a))
 print(f"({a} + {b}) * {c} =", result_b)
 print(f"{a} / {b} / {c} =", result_c)
