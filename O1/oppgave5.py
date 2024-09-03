@@ -1,6 +1,6 @@
 #Starter med å gjøre alle personer til variabler.
-#Viktig å skrive inn int, hvis ikke hadde det vært 7.5 istedenfor 7.
-#For finne gjennomsnittet må man plusse sammen alt av kakene, og dele på antall personer som er med.
+#Her lager vi variabler av alle personer, lager regnestykket (sum/antall_personer)
+#I denne python kodingen, regner det ut gjennomsnitt på hvor mange kaker som er spist opp av 5 personer.
 p1 = 5
 p2 = 9
 p3 = 2.5

@@ -1,6 +1,4 @@
-#Lag tre variabler: a=6, b=3, c=2
-
-#Definer variablene
+#Variabler
 a = 6
 b = 3
 c = 2
@@ -11,7 +9,8 @@ result_b = (a + b) * c      #(a + b) * c
 result_c = a / b / c        #a / b / c
 result_d = a / (b / c)      #a / (b / c)
 
-#Her 
+#Her legger printer vi ut regnestykket ved bruk av variablene og funksjonen som er satt opp.
+#Her har jeg også lagt inn en string.
 print(f"{a} + {b} * {c} = " + str(result_a))
 print(f"({a} + {b}) * {c} =", result_b)
 print(f"{a} / {b} / {c} =", result_c)

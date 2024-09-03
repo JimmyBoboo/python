@@ -1,3 +1,4 @@
+
 #ZeroDivisionError
 #a = 42/0
 #print (a)
@@ -13,10 +14,15 @@
 #tekst = tekst + "1"
 
 #TypeError
-planeter = "Antall planeter i solsystemet:"
-antall_planeter = 8
+#planeter = "Antall planeter i solsystemet:"
+#antall_planeter = 8
 #print (planeter + antall_planeter)
-print (f"{planeter} {antall_planeter}")
+#print (f"{planeter} {antall_planeter}")
+
+
+
+
+
 
 
 

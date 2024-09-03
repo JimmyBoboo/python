@@ -10,3 +10,4 @@ moon_weight = my_earth_weight / earth_Gravity * moon_gravity
 
 print (f"Din vekt på månen er: {moon_weight} kg" )
 
+
