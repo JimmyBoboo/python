@@ -1,4 +1,4 @@
-#Mini Kalkulator
+#Mini Kalkulator, operator.
 
 #Lagd funksjoner, slik at programmet vet hvordan den skal regne.
 def add(x, y):
