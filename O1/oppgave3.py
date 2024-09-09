@@ -35,7 +35,7 @@ print(""" \n
       """)
 
 #lagd en variabel med datatypen int. 
-velg = int(input("Velg tall mellom 1-7"))
+velg = int(input("Velg tall mellom 1-7 "))
 
 x = int(input("Første nr: "))
 y = int(input("Andre nr: "))
