@@ -10,3 +10,6 @@ print(list1)
 print(list2)
 print(list3)
 
+
+list1[2]
+print(list1)
