@@ -10,7 +10,19 @@ print(list1)
 print(list2)
 print(list3)
 
-
+#ifTest
 x = 10
+
 if x > 8 : 
     print("x er større enn 8")
+
+elif x == 10:
+    print("x er lik 10")
+
+elif x < 10:
+    print("x er mindre enn 10")
+
+else:
+    print("Ugyldig")
+
+    
