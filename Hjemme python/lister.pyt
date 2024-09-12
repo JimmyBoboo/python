@@ -11,5 +11,6 @@ print(list2)
 print(list3)
 
 
-list1[2]
-print(list1)
+x = 10
+if x > 8 : 
+    print("x er større enn 8")
