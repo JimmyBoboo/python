@@ -1,39 +1,54 @@
 
 #Lage en pakkeliste for når man skal ut å reise
-#Lage en program for hvilke valg man kan velge.
+
+#Lager en funksjon som heter pakkeliste
+
+pakkeliste = []
 #lagd en tekstboks, som forteller hva man skal velge mellom.
-def pakkeliste():
-    pakkeliste = []
-
 print(""" \n
-    Velkommen til pakkeliste! Velg en av dem under: \n
-      1) 'Legg' - for å legge til noe i pakkelisten \n
-      2) 'Slett' - for å Slette noe i pakkelisten \n
-      3) 'Skriv ut' - for å Skrive ut pakkelisten \n
-      4) 'Avslutt' - for å Avslutte pakkelisten\n
-      """)
+Velkommen til pakkeliste! Velg en av dem under: \n
+    1) 'Legg' - for å legge til noe i pakkelisten \n
+    2) 'Slett' - for å Slette noe i pakkelisten \n
+    3) 'Skriv ut' - for å Skrive ut pakkelisten \n
+    4) 'Avslutt' - for å Avslutte pakkelisten\n
+    """)
 
+#Lager en while-løkke som kjører så lenge brukeren ikke har valgt å avslutte programmet.
+while True:
 
-valg = input("\nSkriv inn hva du ønsker å gjøre: ").strip().lower()
+    valg = input("Hva vil du gjøre? ")
 
 
 #Valg 2: Legg til et element i listen
-if valg == "legg":
-    valg = input("Hva vil du legge til i pakkelisten? ").strip().lower()
-    pakkeliste.append(valg)
-    print(pakkeliste)  
+    if valg == "1":
+        element = input("Hva vil du legge til i pakkelisten? ")
+        pakkeliste.append(element)
+        print(f"{element} er lagt til i pakkelisten.")  
+#valg 3: Slett et element i listen
+    elif valg == "2":
+        element = input("Hva vil du slette fra pakkelisten? ")
+        if element in pakkeliste:
+            pakkeliste.remove(element)
+            print(f"{element} er fjernet fra pakkelisten.")
+        else:
+            print(f"{element} er ikke i pakkelisten.")
+    
+    elif valg == "3":
+        print("Pakkelisten din:")
+        for element in pakkeliste:
+            print(f"- {element}")
 
-#Valg 3: Fjern et element fra listen
-elif valg == "slett":
-    valg = input("Hva vil du slette fra pakkelisten? ").strip()
-    if valg in pakkeliste:
-        pakkeliste.remove(valg)
-        print(f"{valg} er fjernet fra pakkelisten.")
+#Valg 4: Avslutt programmet
+    elif valg == "4":
+        print("Ha en fin reise!")
+        break
+
+    else:
+        print("Ugyldig valg. Prøv igjen.")
         
-#Valg 4: Skriv ut listen
-elif valg == "Skriv ut":
-    pakkeliste =[]
-    print(pakkeliste)
+
+
+
 
 
 
