@@ -8,7 +8,7 @@ Tolkien_sine_boker = [
     "The adventures of tom bombadil",
     "Tree and leaf",
 ]
-
+# Printer ut 2 første bøkene i listen og de 2 siste bøkene i listen.
 print("første 2 bøkene i listen!")
 print(Tolkien_sine_boker[0])
 print(Tolkien_sine_boker[1])
