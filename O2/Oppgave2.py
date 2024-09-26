@@ -13,3 +13,4 @@ while Tall <= 101:
 
 else:
     print("Her stopper det!")
+

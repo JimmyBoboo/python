@@ -3,10 +3,10 @@ import random
 # Definere de lovlige poengene i dart
 lovlige_poeng = (
     [0]
-    + [i for i in range(1, 21)]
-    + [2 * i for i in range(1, 21)]
-    + [3 * i for i in range(1, 21)]
-    + [25, 50]
+    + [i for i in range(0, 50)]
+    + [2 * i for i in range(0, 50)]
+    + [3 * i for i in range(0, 50)]
+    
 )
 
 
