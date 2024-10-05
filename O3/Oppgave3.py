@@ -10,6 +10,8 @@ favorittmat = ["Kebab", "Sushi", "Taco"]
 #favorittdrikke = ["Fanta", "Cola", "Pepsi"]
 print_list(favorittmat)
 
+
+
         
     
     

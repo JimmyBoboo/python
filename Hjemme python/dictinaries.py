@@ -4,3 +4,4 @@ thisdict = {"Type bil": "Ferrari",
 
 x = thisdict["Model"]
 print(x)
+

@@ -4,4 +4,5 @@ print (brettspill[1])
 for spill in brettspill:
     print(spill)
     
-"brettspill [2] = "monopol"
+#brettspill [2] = "monopol"
+

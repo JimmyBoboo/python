@@ -14,7 +14,7 @@ def pick_random_country_and_capital(countries, capitals):
     return cou, cap
 
 
-def guess_capital(countries, capitals):
+def guess_capital():
     country, capital = pick_random_country_and_capital(countries, capitals)
     sted = input(f"Hva er hovedstaden i {country}:? ").lower()
     if sted.lower() == capital.lower():
@@ -24,7 +24,7 @@ def guess_capital(countries, capitals):
 
 
 # Lage en funksjon som gjør tilsier at man ikke kan legge til det samme landet flere ganger.
-def add_country(countries, capitals):
+def add_country():
     country = input("Hvilket land vil du legge til?")
     if country in countries:
         print("Landet er allerede lagt til")

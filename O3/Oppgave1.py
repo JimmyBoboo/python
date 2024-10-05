@@ -8,7 +8,8 @@ x = student ["fornavn"]
 y = student ["etternavn"]
 print(x, y)
 
-z = student["favorittfag"] = "ITF10219 Programmering 1"
+student["favorittfag"] = "ITF10219 Programmering 1"
+z = student["favorittfag"]
 print (z)
 
 student["alder"] = 21
