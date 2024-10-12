@@ -7,10 +7,8 @@ filmer =  [
 
 for film in filmer:
     print(film.get("name") + " - " + film.get("year") + " - " + film.get("rating"))
-    
-def legg_til_film(filmliste, name, year, rating):
-    
-    
+  
+
   
 
     
