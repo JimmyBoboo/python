@@ -6,7 +6,10 @@ def tallgenerering():
     print(f"***{tall}***")
     print("*********")
 
+
 tallgenerering()
+
+
 
 
     
