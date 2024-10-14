@@ -11,7 +11,7 @@ def leggTilFilm(filmer, name, year, rating=5.0):
 leggTilFilm(filmer, 'The martian', 2015, 8.9)
 leggTilFilm(filmer, 'Notebook', 2004, 8.3)
 leggTilFilm(filmer, 'Gemini man', 2019, )
-
+print("****** A)*******")
 # A Lag en funksjon som printer ut filmene.
 for film in filmer:
     print(f"{film['name']} - {film['year']} has a rating of {film['rating']}.")
@@ -26,6 +26,7 @@ def GjennomsnittRangering(filmer):
     
     return total / len(filmer)
 
+print("****** B)*******")
 print(f"Gjennomsnitt rangeringen på alle filmene er {int(GjennomsnittRangering(filmer))}")
 
     
