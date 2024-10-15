@@ -29,13 +29,28 @@ def GjennomsnittRangering(filmer):
 print("****** B)*******")
 print(f"Gjennomsnitt rangeringen på alle filmene er {int(GjennomsnittRangering(filmer))}")
 
+print("****** C)*******")
+# Lag en funksjon som tar en liste med filmer og årstall som parametere. 
+def filmeretter2010 (filmer, year):
+    tomliste = [] # Opprett en tom liste
+    
+    for film in filmer: #Opprettet en for løkke for å gå gjennonm listen. 
+        if film['year'] >= year: # Gå gjennom listen, sjekke om 'year' er >=year (2010)
+            tomliste.append(film) # Pushe inn til listen. Append.film
+    return tomliste # Returner listen. 
+        
+filmer_2010 = filmeretter2010 (filmer, 2010) # Aktivere funksjonen, og legg in parametere. 2010 er 'year' i funksjonen. 
+ 
+for film in filmer_2010:
+    print(f"{film['name']} - {film['year']} has a rating of {film['rating']}.")
+                    
 
-def filmerEtter2010(filmer, arstall):
+
     
-    for film in filmer:
-        if arstall >= 2010 ['year']
-        return arstall
     
+    
+    
+ 
   
     
 
