@@ -29,4 +29,21 @@ def GjennomsnittRangering(filmer):
 print("****** B)*******")
 print(f"Gjennomsnitt rangeringen på alle filmene er {int(GjennomsnittRangering(filmer))}")
 
+
+def filmerEtter2010(filmer, arstall):
     
+    for film in filmer:
+        if arstall >= 2010 ['year']
+        return arstall
+    
+  
+    
+
+
+
+
+ 
+    
+
+
+            
