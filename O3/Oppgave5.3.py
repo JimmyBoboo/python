@@ -1,9 +1,9 @@
 def skrive_til_fil(filmer, filnavn):
     with open(filnavn, "w") as f:
         for film in filmer:
-            liste = (f"\n {film['name']} - {film['year']} has a rating of {film['rating']}.")
+            liste = (f"\n {film['name']} - {film['year']} has a rating of {film['rating']}.!!")
             f.write(liste)
-            print(f"filmen er skrevet til {filnavn}")
+        print(f"filmen er skrevet til {filnavn}")
         
         
 filmer = [
