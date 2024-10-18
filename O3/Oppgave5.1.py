@@ -5,8 +5,7 @@ filmer = [
     {'name': 'Con Air', 'year': 1997, 'rating': 6.9}
 ]
 
-#for film in filmer:
-    #print(f"{film['name']}, kom ut i {film['year']} og ratingen er {film['rating']}.")
+
     
 def leggTilFilm(filmer, name, year, rating=5.0):
     filmer.append({'name': name, 'year': year, 'rating': rating})

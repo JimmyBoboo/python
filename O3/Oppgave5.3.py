@@ -4,7 +4,7 @@ def skrive_til_fil(filmer, filnavn):
         for film in filmer:
             liste = (f"\n {film['name']} - {film['year']} has a rating of {film['rating']}.!!")
             f.write(liste)
-            print(f"filmen er skrevet til {filnavn}")
+        print(f"filmene er skrevet til {filnavn}")
         
 filnavn = "movies.txt"
        
@@ -24,8 +24,8 @@ print("\n --------Oppgave 5.3 B---------")
 def leseFilnavn(filnavn):
     with open (filnavn, "r") as f:
         liste_i_filen = f.read()
-        print(f"Innholdet i listen er: {filnavn}")
-        print (liste_i_filen)
+        print (f"Innholdet i listen er: {liste_i_filen}")
+        
     if liste_i_filen == FileNotFoundError:
         print (f"{filnavn} er ikke funnet.")
         
