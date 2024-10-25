@@ -16,3 +16,4 @@ min_bil = Bil("Toyota", "Corolla", 2020)
 # Bruker metoden for å skrive ut detaljer om bilen
 print(min_bil.beskrivelse())
 
+
