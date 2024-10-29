@@ -1,0 +1,17 @@
+[
+    {
+        "navn": "Tilfeldig planet"
+    },
+    {
+        "navn": "Merkur",
+        "tyngdekraft": 3.7
+    },
+    {
+        "navn": "Venus",
+        "tyngdekraft": 8.87
+    },
+    {
+        "navn": "Jorden",
+        "tyngdekraft": 9.807
+    }
+]
