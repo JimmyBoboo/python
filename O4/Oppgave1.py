@@ -7,7 +7,7 @@ class filmer:
         self.arstall = arstall
         self.rating = rating
 
-# Lage objekter
+# objekter
 film1 = filmer("Incpetion", 2010, 8.8)
 film2 = filmer("The Martian", 2015, 8.0)
 film3 = filmer("Joker", 2019, 8.4)
