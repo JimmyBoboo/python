@@ -41,11 +41,12 @@ def print_result(player, dealer):
     if dealer > 21:
         print("Dealer has busted. You win!")
     elif player > 21:
-        print("You have busted. Dealer wins!")
+        print("You have busted. Dealer wins! ")
     elif player == dealer:
         print("It's a tie!")
     elif player > dealer:
         print("You win!")
     elif dealer > player:
         print("Dealer wins!")
-        
+
+

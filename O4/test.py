@@ -13,8 +13,8 @@ for i in range(2):
      
 
 # Kort utdeling av spiller og dealer.    
-print(f"The cards have been dealt. You have a {player[0]} and a {player[1]}  with a total value of {bjm.calculate_hand_value(player)}")
-print(f"The dealers visible card is a {dealer[0]}, with a value of {bjm.get_card_value(dealer[0])}")
+print(f"\n The cards have been dealt. You have a {player[0]} and a {player[1]}, \n with a total value of: {bjm.calculate_hand_value(player)}")
+print(f"\n The dealers visible card is a {dealer[0]}, \n with a value of: {bjm.get_card_value(dealer[0])}")
 
 if bjm.calculate_hand_value(player) == 21:
     print("Congratulations, you have blackjack!")
@@ -40,5 +40,6 @@ else:
         else:
             print("Invalid choice")
             
+
             
-    
+
