@@ -31,6 +31,7 @@ while True:
                 player.append(playercard)
                 print(f"You have drawn a {playercard}, You have a total value of: {bjm.calculate_hand_value(player)}")
                 bjm.print_result(bjm.calculate_hand_value(player), bjm.calculate_hand_value(dealer))
+                break
                 
             elif choice == "2":
                 print(f"You have a {player[0]} and a {player[1]}  with a total value of {bjm.calculate_hand_value(player)}")
@@ -40,11 +41,16 @@ while True:
             
             else:
                 print("Invalid choice")
+                
+            
             
             
                 
         play_again = input("Do you want to play again? (yes/no) > ").lower()
-        if play_again != 'yes':
+        if play_again == "yes":
+            continue        
+        else:
+            print("Invalid choice")
             break
 
             

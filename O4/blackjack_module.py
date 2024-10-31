@@ -48,5 +48,9 @@ def print_result(player, dealer):
         print("You win!")
     elif dealer > player:
         print("Dealer wins!")
-
+    elif dealer == 21:
+        print("Dealer has blackjack! Dealer wins!")
+    else:
+        print("Invalid choice")
+        
 
