@@ -31,7 +31,11 @@ while True:
                 player.append(playercard)
                 print(f"You have drawn a {playercard}, You have a total value of: {bjm.calculate_hand_value(player)}")
                 bjm.print_result(bjm.calculate_hand_value(player), bjm.calculate_hand_value(dealer))
-                break
+                if bjm.calculate_hand_value(player) < 21:
+                    playercard = bjm.get_new_card(cards)
+                    player.append(playercard)
+                    print(f"You have drawn a {playercard}, You have a total value of: {bjm.calculate_hand_value(player)}")
+                    
                 
             elif choice == "2":
                 print(f"You have a {player[0]} and a {player[1]}  with a total value of {bjm.calculate_hand_value(player)}")
@@ -39,6 +43,7 @@ while True:
                 bjm.print_result(bjm.calculate_hand_value(player), bjm.calculate_hand_value(dealer))
                 break
             
+           
             else:
                 print("Invalid choice")
                 
