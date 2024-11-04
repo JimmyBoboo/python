@@ -30,6 +30,7 @@ else:
             playercard = bjm.get_new_card(cards)
             player.append(playercard)
             print(f"You have drawn a {playercard}, You have a total value of: {bjm.calculate_hand_value(player)}")
+            print(f"The dealers has the cards {dealer[0]} and {dealer[1]} with a value of {bjm.calculate_hand_value(dealer)}")
             bjm.print_result(bjm.calculate_hand_value(player), bjm.calculate_hand_value(dealer))
             
         elif choice == "2":
