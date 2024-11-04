@@ -29,12 +29,19 @@ while True:
             if choice == "1":
                 playercard = bjm.get_new_card(cards)
                 player.append(playercard)
-                print(f"You have drawn a {playercard}, You have a total value of: {bjm.calculate_hand_value(player)}")
-                bjm.print_result(bjm.calculate_hand_value(player), bjm.calculate_hand_value(dealer))
+                # # print(f"You have drawn a {playercard}, You have a total value of: {bjm.calculate_hand_value(player)}")
+                #Hvis spilleren har under 21, vil den fortsette å spørre om å trekke eller stå. 
                 if bjm.calculate_hand_value(player) < 21:
-                    playercard = bjm.get_new_card(cards)
-                    player.append(playercard)
-                    print(f"You have drawn a {playercard}, You have a total value of: {bjm.calculate_hand_value(player)}")
+                    print (f"Du fikk {playercard}, og har tilsammen: {bjm.calculate_hand_value(player)}, vil stå eller trekke?")
+                #Hvis spilleren får 21, vinner den!
+                elif bjm.calculate_hand_value(player) == 21:
+                    print(f"Du fikk blackjack. Du Vinner!!")
+                elif bjm.calculate_hand_value(player) > 21:
+                    print(f"Du har Busta! Du fikk {bjm.calculate_hand_value(player)}")
+                    break
+                # bjm.print_result(bjm.calculate_hand_value(player), bjm.calculate_hand_value(dealer))
+                
+                    
                     
                 
             elif choice == "2":
