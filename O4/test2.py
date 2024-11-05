@@ -49,8 +49,6 @@ while True:
                 # bjm.print_result(bjm.calculate_hand_value(player), bjm.calculate_hand_value(dealer))
                 
                     
-                    
-                
             elif choice == "2":
                 # print(f"You have a {player[0]} and a {player[1]}  with a total value of {bjm.calculate_hand_value(player)}")
                 # print(f"The dealers has the cards {dealer[0]} and {dealer[1]} with a value of {bjm.calculate_hand_value(dealer)}")
