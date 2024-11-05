@@ -1,4 +1,5 @@
 import blackjack_module as bjm
+from pyfiglet import figlet_format
 def spill_runde(penger):
     cards = bjm.get_new_shuffled_deck()
 
@@ -11,7 +12,7 @@ def spill_runde(penger):
         player.append(playercard)
         dealer.append(dealercard)
     
-    print("\nVelkommen til BlackJack her hos JB sin Casino!")
+    print(figlet_format("Velkommen til BlackJack!", font="standard"))
     while True:
         try:
             innsats = int(input(f"Du har {penger} kr. \nHvor mye vil du satse? "))
