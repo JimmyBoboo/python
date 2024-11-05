@@ -1,5 +1,4 @@
 import blackjack_module as bjm
-from pyfiglet import figlet_format
 def spill_runde(penger):
     cards = bjm.get_new_shuffled_deck()
 
@@ -12,7 +11,7 @@ def spill_runde(penger):
         player.append(playercard)
         dealer.append(dealercard)
     
-    print(figlet_format("Velkommen til BlackJack!", font="standard"))
+    print("Velkommen til BlackJack!")
     while True:
         try:
             innsats = int(input(f"Du har {penger} kr. \nHvor mye vil du satse? "))
@@ -30,11 +29,11 @@ def spill_runde(penger):
 
     # Muligheter for hva som skjer
     if bjm.calculate_hand_value(player) == 21:
-        print("Congratulations, you have blackjack!")
+        print("Gratulerer du fikk blackjack!")
         return penger + innsats
-    elif bjm.calculate_hand_value(dealer) == 21:
-        print("Dealeren fikk blackjack, du har tapt!")
-        return penger - innsats
+    # elif bjm.calculate_hand_value(dealer) == 21:
+    #     print("Dealeren fikk blackjack, du har tapt!")
+    #     return penger - innsats
 
     # Spillerens valg: hit eller stand
     while True:
@@ -72,6 +71,10 @@ def spill_runde(penger):
                 if nytt_kort_Dealer > 21:
                     print("Dealeren busta! Du vinner!")
                     return penger + innsats
+                
+                elif bjm.calculate_hand_value(dealer) == 21:
+                    print("Dealeren fikk blackjack, du har tapt!")
+                    return penger - innsats
                 
                 elif nytt_kort_Dealer > nytt_kort_player:
                     print(f"Dealeren har {nytt_kort_Dealer}. Du taper!")
