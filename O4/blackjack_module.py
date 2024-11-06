@@ -37,20 +37,20 @@ def calculate_hand_value(hand):
 def get_new_card(deck):
     return deck.pop()
 
-def print_result(player, dealer):
-    if dealer > 21:
-        print("Dealer has busted. You win!")
-    elif player > 21:
-        print("You have busted. Dealer wins! ")
-    elif player == dealer:
-        print("It's a tie!")
-    elif player > dealer:
-        print("You win!")
-    elif dealer > player:
-        print("Dealer wins!")
-    elif dealer == 21:
-        print("Dealer has blackjack! Dealer wins!")
-    else:
-        print("Invalid choice")
+# def print_result(player, dealer):
+#     if dealer > 21:
+#         print("Dealer has busted. You win!")
+#     elif player > 21:
+#         print("You have busted. Dealer wins! ")
+#     elif player == dealer:
+#         print("It's a tie!")
+#     elif player > dealer:
+#         print("You win!")
+#     elif dealer > player:
+#         print("Dealer wins!")
+#     elif dealer == 21:
+#         print("Dealer has blackjack! Dealer wins!")
+#     else:
+#         print("Invalid choice")
         
 
