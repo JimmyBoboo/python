@@ -25,7 +25,7 @@ class filmer:
         self.tittel = tittel
         self.arstall = arstall
         self.rating = rating
-    def __str__ (self):
+    def print (self):
         return (f"{self.tittel} - Utgivelsesår: {self.arstall}, score {self.rating}")
     
 film1 = filmer("Incpetion", 2010, 8.8)
@@ -33,9 +33,9 @@ film2 = filmer("The Martian", 2015, 8.0)
 film3 = filmer("Joker", 2019, 8.4)
 
 print("\n ------Filmer, Returnert med string------")
-print(film1)
-print(film2)
-print(film3)
+print(film1.print())
+print(film2.print())
+print(film3.print())
 
 
 
