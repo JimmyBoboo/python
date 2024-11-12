@@ -7,7 +7,7 @@ from PyQt6.QtGui import QPixmap, QIcon
 planeter = ["Merkur", "Venus", "Jorden", "Mars", "Jupiter", "Saturn", "Uranus", "Neptun"]
 tyngdekraft = [3.7, 8.87, 9.807, 3.721, 24.79, 10.44, 8.87, 11.15]
 
-planetbilder = ['GUII/bilder/sun.png', 'GUI/bilder/merkur.png', 'GUII/bilder/jorden.png', 'GUII/bilder/mars.png', 'GUII/bilder/mars.png', 'GUII/bilder/jupiter.png'
+planetbilder = ['GUII/bilder/sun.png', 'GUII/bilder/merkur.png', 'GUII/bilder/venus.jpg', 'GUII/bilder/jorden.png', 'GUII/bilder/mars.png', 'GUII/bilder/mars.png', 'GUII/bilder/jupiter.png',
                 'GUII/bilder/saturn.png', 'GUII/bilder/uranus.png', 'GUII/bilder/neptun.png']
 
 class Hovedvindu(QWidget):
@@ -17,7 +17,7 @@ class Hovedvindu(QWidget):
         # Setter tittel og størrelse på vinduet, og legger også til et ikon
         self.setWindowTitle('Planetvekt')
         self.setGeometry(100, 100, 500, 400)
-        vinduicon = QIcon('bilder/sun.png')
+        vinduicon = QIcon('GUII/bilder/sun.png')
         self.setWindowIcon(vinduicon)
 
         # Oppretter et gridlayout
@@ -50,31 +50,57 @@ class Hovedvindu(QWidget):
         self.skjema.addRow(self.vekt_input)
         
         self.regnutknapp = QPushButton("Regn ut")
+        self.regnutknapp.connect(self.regn_ut)
         
-        self.layout.addLayout(self.skjema, 1, 0)
+        self.skjema.addRow(self.regnutknapp)
+        
+        # self.layout.addLayout(self.skjema, 1, 0)
         
         self.bildelabel = QLabel()
-        self.pixmap = QPixmap('GUII/bilder/sun.png')
+        self.pixmap = QPixmap("GUII/bilder/sun.png")
         self.pixmap = self.pixmap.scaled(256, 256)
         self.bildelabel.setPixmap(self.pixmap)
         
         self.layout.addWidget(self.bildelabel, 1, 1)
         
-        # self.skjema.addRow(self.regnutknapp)
+        self.bunnlabel = QLabel("Velg en planet og skriv inn vekten din")
+        # self.bunnlabel = QLabel("Velg en planet og skriv inn vekten din!")
+        # self.layout.addWdiget(self.bunnlabel, 2, 0, 1, alignment=Qt.AlignmentFlag)
         
-        self.bunnlabel = QLabel("Velg en planet og skriv inn vekten din!")
-        # self.skjema.addWidget(self.bunnlabel, 2, 0, 1, alignment=Qt.AlignmentFlag)
-        self.layout.addWdiget(self.bunnlabel, 2, 0, 1, alignment=Qt.AlignmentFlag)
         
         
         self.show()                                                 # Må være med for at vinduet skal vises
 
     def oppdater_bilde(self):
-        pass
+        self.pixmap = QPixmap(planetbilder[self.meny_combobox.currentIndex()])
+        self.pixmap = self.pixmap.scaled(256, 256)
+        self.bildelabel.setPixmap(self.pixmap)    
+        
+    def regn_ut(self):
+        self.planetnummer = self.meny_combobox.currentIndex()
+        
+        if self.planetnummer == 0:
+            self.planetnummer = random.randrange(0, len(planeter))
+            self.ny_vekt = beregn_vekt(self.vekt_input.value(), tyngdekraft [self.planetnummer] ) 
+            self.bunnlabel.setText(f"Du fikk planeten {planeter[self.planetnummer]}, Din vekt på denne planeten, med tyngdekraft {tyngdekraft[self.planetnummer]}ville vært {self.ny_vekt} kg")
+            self.pixmap =QPixmap(planetbilder[self.planetnummer + 1])
+            self.pixmap = self.pixmap.scaled(256, 256)
+            self.bildelabel.setPixmap(self.pixmap)
+
+        else:
+            self.ny_vekt = beregn_vekt(self.vekt_input.value(), tyngdekraft [self.planetnummer -1])
+            self.bunnlabel.setText(f"Din vekt på planeten {planeter[self.planetnummer -1]}, med tyngdekraft {tyngdekraft[self.planetnummer -1]} m/s^2 er {self.ny_vekt} kg.")
+            
+        
+def beregn_vekt(din_vekt, planettyngdekraft, jordtyngdekraft=9.07):
+    beregn_vekt = din_vekt /jordtyngdekraft * planettyngdekraft
+    return round(beregn_vekt, 1)
+    
+    
 # Må alltid med:
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     vindu = Hovedvindu()
     sys.exit(app.exec())
 
-# To be continued..
+
