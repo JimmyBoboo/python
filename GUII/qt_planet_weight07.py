@@ -7,7 +7,8 @@ from PyQt6.QtGui import QPixmap, QIcon
 planeter = ["Merkur", "Venus", "Jorden", "Mars", "Jupiter", "Saturn", "Uranus", "Neptun"]
 tyngdekraft = [3.7, 8.87, 9.807, 3.721, 24.79, 10.44, 8.87, 11.15]
 
-planetbilder = ['bilder/sun.png', ]
+planetbilder = ['GUII/bilder/sun.png', 'GUI/bilder/merkur.png', 'GUII/bilder/jorden.png', 'GUII/bilder/mars.png', 'GUII/bilder/mars.png', 'GUII/bilder/jupiter.png'
+                'GUII/bilder/saturn.png', 'GUII/bilder/uranus.png', 'GUII/bilder/neptun.png']
 
 class Hovedvindu(QWidget):
     def __init__(self):
@@ -53,7 +54,7 @@ class Hovedvindu(QWidget):
         self.layout.addLayout(self.skjema, 1, 0)
         
         self.bildelabel = QLabel()
-        self.pixmap = QPixmap('bilder/sun.png')
+        self.pixmap = QPixmap('GUII/bilder/sun.png')
         self.pixmap = self.pixmap.scaled(256, 256)
         self.bildelabel.setPixmap(self.pixmap)
         
@@ -61,8 +62,9 @@ class Hovedvindu(QWidget):
         
         # self.skjema.addRow(self.regnutknapp)
         
-        self.bunnlabel = QLabel('Velg en planet og skriv inn vekten din!')
-        # self.layout.addWdiget(self.bunnlabel, 2, 0, 1, alignment=Qt.AlignmentFlag)
+        self.bunnlabel = QLabel("Velg en planet og skriv inn vekten din!")
+        # self.skjema.addWidget(self.bunnlabel, 2, 0, 1, alignment=Qt.AlignmentFlag)
+        self.layout.addWdiget(self.bunnlabel, 2, 0, 1, alignment=Qt.AlignmentFlag)
         
         
         self.show()                                                 # Må være med for at vinduet skal vises
