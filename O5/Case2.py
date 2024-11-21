@@ -8,7 +8,7 @@ def print_car_information(brand, model, price, year, month, Condition):
     
 # -----------------------Oppgave 2---------------------------------------------
 def create_car(car_register, brand, model, price, year, month, new, km):
-    car_register = {
+    car_register[brand + model] = {
         "brand": brand,
         "Model": model,
         "Price": price,
@@ -17,6 +17,7 @@ def create_car(car_register, brand, model, price, year, month, new, km):
         "New": new,
         "km": km
     }
+    return car_register
 
 # -----------------------Oppgave 3---------------------------------------------
 from datetime import datetime
@@ -77,3 +78,34 @@ def calculate_total_price(base_pris, year_lagd, hvis_ny):
     total_pris = base_pris + avgift
     return total_pris
 
+# -----------------------Oppgave 7---------------------------------------------
+class car:
+    def __init__(self, brand, model, price, year, month, new, km):
+        self.brand = brand
+        self.model = model
+        self.price = price
+        self.year = year
+        self.month = month
+        self.new = new
+        self.km = km
+        
+    
+    def print_car_information(self):
+        pass
+
+    def get_car_age(self):
+        pass
+
+    def next_eu_control(self):
+        pass
+
+    def rent_car_monthly_price(self):
+        pass
+
+    def calculate_total_price(self):
+        pass
+
+    def is_new(self):
+        pass
+    
+# Grunnen til at jeg ikke tok med create_car er fordi, det er ikke nødvendig å ha en metode for å lage en bil, når jeg allerede har en klasse som gjør det. 

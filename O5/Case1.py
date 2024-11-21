@@ -15,24 +15,15 @@ def calculate_average_ware_rating(ware):
     gjennomsnitt = sum(rating) / len(rating)
     return round(gjennomsnitt, 1)                                       
 
-# eksempel_vare = {
-#     "navn": "Eksempel vare",
-#     "rating": [5, 2, 7, 1, 6]
-# }
-
-# gjennomsnitt_rangering = calculate_average_ware_rating(eksempel_vare)
-# if gjennomsnitt_rangering is not None:
-#     print(f"Gjennomsnitt rangering er: {gjennomsnitt_rangering}")
-# else:
-#     print("Denne varen har ikke fått rangering")
 # -------------------Oppgave 3-----------------------------------------
+def get_all_wares_in_stock(all_wares):
+    new_dict = {}
+    for i in all_wares.keys():
+        ware = all_wares.get(i)
+        if ware.get("number_in_stock") > 0:
+            new_dict[i] = ware
 
-
-
-
-
-
-
+    return new_dict
 
 
 # -------------------Oppgave 4-----------------------------------------
@@ -40,15 +31,6 @@ def calculate_average_ware_rating(ware):
 def is_number_of_ware_in_stock(ware, number_of_ware):
     stock = ware.get("antall", 0)
     return stock >= number_of_ware
-
-# eksempel_bruk = {
-#                 'name': 'Example ware',
-#                 'price': 3999,
-#                 'antall': 30,
-#                 'beskrivelse': 'A non existent ware used only for this example'}
-
-# print(is_number_of_ware_in_stock(eksempel_bruk, 5))
-# print(is_number_of_ware_in_stock(eksempel_bruk, 40))
 
 # -------------------Oppgave 5-----------------------------------------
 def add_number_of_ware_to_shopping_cart(ware_key, ware, shopping_cart, number_of_ware=1):

@@ -15,5 +15,3 @@ def next_eu_control(year_lagd, maned_lagd):
     
     return date(neste_EU_sjekk, maned_lagd, 1)
 
-neste_kontroll_sjekk = next_eu_control(2020, 6)
-print(f"Neste EU kontroll er: {neste_kontroll_sjekk}")
