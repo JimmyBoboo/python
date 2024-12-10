@@ -1,4 +1,6 @@
 # -----------------------Oppgave 1---------------------------------------------
+# Implementer funksjonen print_car_information() som printer ut informasjon om en bil på følgende format:
+# Brand: Toyota # Model: Corolla # Price. 96000,- # Manufactured: 2012-8 # Condition: Used
 def print_car_information(brand, model, price, year, month, Condition):
     print(f"Brand: {brand}")
     print(f"Model: {model}")
@@ -7,6 +9,9 @@ def print_car_information(brand, model, price, year, month, Condition):
     print(f"Condition: {Condition}")
     
 # -----------------------Oppgave 2---------------------------------------------
+# Implementer funksjonen create_car() som tar forskjellig informasjon om en bil som parametere. 
+# Denne skal lage en dictionary for en bil med korrekte nøkkelverdier slik som beskrevet i Case-beskrivelsen, 
+# legger den inn i registeret og returner til slutt bil-dictionaryen.
 def create_car(car_register, brand, model, price, year, month, new, km):
     car_register[brand + model] = {
         "brand": brand,
@@ -18,8 +23,9 @@ def create_car(car_register, brand, model, price, year, month, new, km):
         "km": km
     }
     return car_register
-
 # -----------------------Oppgave 3---------------------------------------------
+# Implementer funksjonen get_car_age() som returnerer bilens alder fra inneværende år.
+# F.eks. Hvis bilen er fra 2019, og inneværende år er 2022, er bilen 3 år (vi bryr oss ikke om måned).
 from datetime import datetime
 def get_car_age(year_lagd):
     naa_dagens_aar = datetime.now().year
@@ -27,6 +33,8 @@ def get_car_age(year_lagd):
     return car_age
 
 # -----------------------Oppgave 4---------------------------------------------
+# Implementer funksjonen rent_car_monthly_price() som returner månedsprisen for å leie en bil (prisen skal være avrundet til 2 desimaler). 
+# Den årlige prisen er 40% av totalprisen av bilen. Hvis bilen er ny, skal det også legges til en påslag på 1000kr i måneden.
 def rent_car_monthly(bilpris, hvis_ny):
     arlig_pris = 0.4 * bilpris
     manedlig_pris = arlig_pris / 12
@@ -35,6 +43,8 @@ def rent_car_monthly(bilpris, hvis_ny):
         return round(manedlig_pris, 2)
     
 # -----------------------Oppgave 5---------------------------------------------
+# Implementer funksjonen next_eu_control() som returnerer et dato-objekt for neste EU-kontroll. 
+# EU-kontrollen skal skje hver 2. år, fra året og måneden bilen ble produsert. Det er OK om man setter den 1. i måneden i dato-objektet man returnerer.
 from datetime import date
 def next_eu_control(year_lagd, maned_lagd):
     naa_dagens_dato = date.today()
